@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "uni-drawer": "/uni_modules/uni-drawer/components/uni-drawer/uni-drawer",
+    "uni-title": "/uni_modules/uni-title/components/uni-title/uni-title",
+    "deatil-card": "/components/deatilCard/deatilCard",
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "popup-message": "/uni_modules/uni-popup/components/uni-popup-message/uni-popup-message"
+  },
+  "component": true
+}

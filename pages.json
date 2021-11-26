@@ -1,0 +1,30 @@
+{
+	"easycom": {
+		// npm安装的方式不需要前面的"@/"，下载安装的方式需要"@/"
+		"^uni-(.*)": "@/uni_modules/uni-$1/components/uni-$1/uni-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "阅卷分析"
+			}
+		}
+	    ,{
+            "path" : "pages/reportDetail/reportDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTitleText": "阅卷分析",
+		"navigationBarBackgroundColor": "#1CBC9C",
+		"backgroundColor": "#F8F8F8",
+		"navigationBarTextStyle": "white",
+		"animationType": "fade-in"
+	}
+}

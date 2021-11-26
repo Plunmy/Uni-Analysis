@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reportDetail/reportDetail"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTitleText": "阅卷分析",
+    "navigationBarBackgroundColor": "#1CBC9C",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "white",
+    "animationType": "fade-in"
+  },
+  "usingComponents": {}
+}

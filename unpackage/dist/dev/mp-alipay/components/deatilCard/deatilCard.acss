@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/* 颜色变量 */
+/* uni.scss */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.cardBtn {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 65px;
+  display: inline-block;
+  font-size: 14px;
+  padding: 0;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+

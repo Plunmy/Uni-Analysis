@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reportDetail/reportDetail"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "阅卷分析",
+    "titleBarColor": "#1CBC9C",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

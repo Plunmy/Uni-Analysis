@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "阅卷分析",
+  "usingComponents": {
+    "info-card": "/components/infoCard/infoCard"
+  }
+}
