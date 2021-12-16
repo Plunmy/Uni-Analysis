@@ -1,6 +1,6 @@
 {
-  "navigationBarTitleText": "阅卷分析",
   "usingComponents": {
-    "info-card": "/components/infoCard/infoCard"
+    "info-card": "/components/infoCard/infoCard",
+    "u-toast": "/uview-ui/components/u-toast/u-toast"
   }
 }

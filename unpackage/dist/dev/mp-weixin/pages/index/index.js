@@ -97,6 +97,9 @@ try {
   components = {
     infoCard: function() {
       return __webpack_require__.e(/*! import() | components/infoCard/infoCard */ "components/infoCard/infoCard").then(__webpack_require__.bind(null, /*! @/components/infoCard/infoCard.vue */ 156))
+    },
+    uToast: function() {
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-toast/u-toast */ "uview-ui/components/u-toast/u-toast").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-toast/u-toast.vue */ 221))
     }
   }
 } catch (e) {
@@ -153,7 +156,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
 //
 //
 //
@@ -173,6 +177,7 @@ var _default =
 {
   data: function data() {
     return {
+      show: false,
       title: 'Uni-app',
       isNight: false,
       cardList: [{
@@ -273,9 +278,7 @@ var _default =
 
 
   },
-  onInit: function onInit() {
-
-  },
+  onInit: function onInit() {},
   onLoad: function onLoad() {
     // console.log(this.$path.user.getName);
     // console.log('sssss');
@@ -290,8 +293,33 @@ var _default =
       console.log(res);
     });
   },
-  onReady: function onReady() {},
+  onReady: function onReady() {
+    var that = this;
+    uni.$on('feedBack', function (res, type) {
+      // uni.$emit('tranferParam', res);
+      var url = '';
+      if (type == 'module') {
+        that.$refs.uToast.show({
+          type: 'error',
+          icon: false,
+          message: "暂无该模块" });
+
+        return;
+      }
+      if (type == 'report') {
+        url = '../reportDetail/reportDetail?id=1';
+      }
+      uni.navigateTo({
+        url: url,
+        animationDuration: 500,
+        success: function success(result) {
+          result.eventChannel.emit('tranferParam', res);
+        } });
+
+    });
+  },
   methods: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

@@ -1,1 +1,1 @@
-<view class="content" id="home"><view class="cardDiv"><block wx:for="{{cardList}}" wx:for-item="item" wx:for-index="i" wx:key="i"><info-card vue-id="{{'8dd740cc-1-'+i}}" cardItem="{{item}}" bind:__l="__l"></info-card></block></view></view>
+<view class="content" id="home"><view class="cardDiv"><block wx:for="{{cardList}}" wx:for-item="item" wx:for-index="i" wx:key="i"><info-card vue-id="{{'8dd740cc-1-'+i}}" cardItem="{{item}}" bind:__l="__l"></info-card></block></view><u-toast class="vue-ref" vue-id="8dd740cc-2" data-ref="uToast" bind:__l="__l"></u-toast></view>

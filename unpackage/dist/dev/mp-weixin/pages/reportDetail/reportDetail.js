@@ -134,13 +134,51 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
+    return {
+      commonParam: {
+        title: 'sss' } };
+
 
   },
+  onInit: function onInit() {},
+  onLoad: function onLoad(result) {
+    // let chel = new Channel();
+    // console.log(chel);
+    // chel.eventOn('other', (res) => {
+    // 	console.log(res);
+    // });
+    // console.log(result?.id);
+    //
+
+
+    //
+    // const eventChannel = this.getOpenerEventChannel();
+    //
+    // const eventChannel = this.$scope.eventChannel;
+    // const eventChannel = this.getOpenerEventChannel();
+    // const eventChannel = this.getOpenerEventChannel();
+    // eventChannel.on('tranferParam', res => {
+    // 	// console.log(res);
+    // 	this.commonParam = res;
+    // })
+    console.log('this:', this);
+    this.$channel.eventOn('tranferParam', function (res) {
+      console.log(res);
+    });
+  },
+  onReady: function onReady() {
+    // console.log('init');
+  },
   mounted: function mounted() {
+    // uni.$once('tranferParam', res => {
+    // 	this.commonParam = res;
+    // 	console.log(this.commonParam);
+    // })
   } };exports.default = _default;
 
 /***/ })

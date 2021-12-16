@@ -11,5 +11,6 @@
     "navigationBarTextStyle": "white",
     "animationType": "fade-in"
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

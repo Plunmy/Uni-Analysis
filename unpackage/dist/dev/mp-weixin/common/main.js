@@ -14,14 +14,23 @@ var _store = _interopRequireDefault(__webpack_require__(/*! ./store/store.js */ 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 3));
 var _request = _interopRequireDefault(__webpack_require__(/*! ./utils/request/request.js */ 15));
 var _path = _interopRequireDefault(__webpack_require__(/*! ./path/path.js */ 16));
-var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
+var _uviewUi = _interopRequireDefault(__webpack_require__(/*! uview-ui */ 19));
+var _eventChannel = _interopRequireDefault(__webpack_require__(/*! ./utils/eventChannel.js */ 277));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}wx.__webpack_require_UNI_MP_PLUGIN__ = __webpack_require__;
 _vue.default.use(_uviewUi.default);
+
+var chel = new _eventChannel.default();
+console.log(chel);
+// chel.eventOn('other', (res) => {
+// 	console.log(res);
+// });
 
 _vue.default.config.productionTip = false;
 _App.default.mpType = 'app';
 _vue.default.prototype.$store = _store.default;
 _vue.default.prototype.$api = _request.default;
 _vue.default.prototype.$path = _path.default;
+
+_vue.default.prototype.$channel = chel;
 
 var app = new _vue.default(_objectSpread({},
 _App.default));

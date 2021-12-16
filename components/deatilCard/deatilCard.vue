@@ -7,7 +7,7 @@
 				<button class="cardBtn" @click="gotoModule()" type="default"
 					style="background-color: #FFFFFF;color: #07C160;">查看模板</button>
 				<button class="cardBtn" @click="gotoReport()" type="default"
-					style="background-color: #07C160;color: #FFFFFF;">查看报告</button>
+					style="background-color: #16c174;color: #FFFFFF;">查看报告</button>
 			</view>
 		</uni-card>
 	</view>
@@ -33,10 +33,10 @@
 		},
 		methods: {
 			gotoReport() {
-				console.log(this.detailItem);
+				uni.$emit('feedBack', this.detailItem, 'report')
 			},
 			gotoModule() {
-				console.log(this.detailItem);
+				uni.$emit('feedBack', this.detailItem, 'module')
 			}
 		},
 		onReady() {

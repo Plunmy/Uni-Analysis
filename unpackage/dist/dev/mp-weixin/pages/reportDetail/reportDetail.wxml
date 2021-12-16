@@ -1,1 +1,1 @@
-<view></view>
+<view><view>{{''+commonParam.title+''}}</view></view>

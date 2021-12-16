@@ -6,11 +6,12 @@
 		</view> -->
 
 		<view class="cardDiv">
+			<!-- @feedBack='feedBack()' -->
 			<infoCard v-for="(item,i) in cardList" :key='i' :cardItem='item'></infoCard>
 			<!-- <infoCard :cardItem='cardList[1]'></infoCard> -->
 		</view>
 
-		<!-- <u-toast ref="requestRef"></u-toast> -->
+		<u-toast ref="uToast"></u-toast>
 	</view>
 </template>
 
@@ -18,6 +19,7 @@
 	export default {
 		data() {
 			return {
+				show: false,
 				title: 'Uni-app',
 				isNight: false,
 				cardList: [{
@@ -118,9 +120,7 @@
 				]
 			}
 		},
-		onInit() {
-
-		},
+		onInit() {},
 		onLoad() {
 			// console.log(this.$path.user.getName);
 			// console.log('sssss');
@@ -135,7 +135,31 @@
 				console.log(res);
 			})
 		},
-		onReady() {},
+		onReady() {
+			let that = this;
+			uni.$on('feedBack', (res, type) => {
+				// uni.$emit('tranferParam', res);
+				let url = '';
+				if (type == 'module') {
+					that.$refs.uToast.show({
+						type: 'error',
+						icon: false,
+						message: "暂无该模块",
+					})
+					return
+				}
+				if (type == 'report') {
+					url = '../reportDetail/reportDetail?id=1'
+				}
+				uni.navigateTo({
+					url: url,
+					animationDuration: 500,
+					success(result) {
+						result.eventChannel.emit('tranferParam', res)
+					}
+				})
+			})
+		},
 		methods: {}
 	}
 </script>
