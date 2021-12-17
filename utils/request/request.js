@@ -37,7 +37,6 @@ let request = (path, data, method) => {
 			}
 		});
 	})
-
 }
 
 export default request;

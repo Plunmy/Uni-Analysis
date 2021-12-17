@@ -137,7 +137,7 @@
 		},
 		onReady() {
 			let that = this;
-			uni.$on('feedBack', (res, type) => {
+			uni.$once('feedBack', (res, type) => {
 				// uni.$emit('tranferParam', res);
 				let url = '';
 				if (type == 'module') {
@@ -149,15 +149,20 @@
 					return
 				}
 				if (type == 'report') {
-					url = '../reportDetail/reportDetail?id=1'
+					url = '../reportDetail/reportDetail?id=1,other=done'
 				}
-				uni.navigateTo({
-					url: url,
-					animationDuration: 500,
-					success(result) {
-						result.eventChannel.emit('tranferParam', res)
-					}
+				// 封装跳转并传值事件
+				this.$channel.navigateEmit(url, 'tranferParam', res, 'backData', (res) => {
+					console.log('backData:', res);
 				})
+				// console.log(uni);
+				// uni.navigateTo({
+				// 	url: url,
+				// 	animationDuration: 500,
+				// 	success(result) {
+				// 		result.eventChannel.emit('tranferParam', res)
+				// 	}
+				// })
 			})
 		},
 		methods: {}
