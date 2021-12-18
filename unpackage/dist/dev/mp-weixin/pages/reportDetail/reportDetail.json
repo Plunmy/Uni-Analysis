@@ -1,4 +1,8 @@
 {
   "enablePullDownRefresh": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "u-skeleton": "/uview-ui/components/u-skeleton/u-skeleton",
+    "u-transition": "/uview-ui/components/u-transition/u-transition",
+    "u-parse": "/uview-ui/components/u-parse/u-parse"
+  }
 }

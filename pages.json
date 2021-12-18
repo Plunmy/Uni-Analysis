@@ -17,8 +17,33 @@
 				"enablePullDownRefresh": true
 			}
 
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"height": "50px",
+		"selectedColor": "#1cbc9c",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/images/home.png",
+			"selectedIconPath": "static/images/homeSelect.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "static/images/me.png",
+			"selectedIconPath": "static/images/meSelect.png",
+			"text": "我的"
+		}]
+	},
 	"globalStyle": {
 		"navigationBarTitleText": "阅卷分析",
 		"navigationBarBackgroundColor": "#1CBC9C",

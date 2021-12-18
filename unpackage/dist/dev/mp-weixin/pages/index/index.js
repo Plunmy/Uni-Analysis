@@ -295,7 +295,7 @@ var _default =
   },
   onReady: function onReady() {var _this = this;
     var that = this;
-    uni.$once('feedBack', function (res, type) {
+    uni.$on('feedBack', function (res, type) {
       // uni.$emit('tranferParam', res);
       var url = '';
       if (type == 'module') {
@@ -311,7 +311,7 @@ var _default =
       }
       // 封装跳转并传值事件
       _this.$channel.navigateEmit(url, 'tranferParam', res, 'backData', function (res) {
-        console.log('backData:', res);
+        console.log(res);
       });
       // console.log(uni);
       // uni.navigateTo({

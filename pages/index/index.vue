@@ -137,7 +137,7 @@
 		},
 		onReady() {
 			let that = this;
-			uni.$once('feedBack', (res, type) => {
+			uni.$on('feedBack', (res, type) => {
 				// uni.$emit('tranferParam', res);
 				let url = '';
 				if (type == 'module') {
@@ -152,8 +152,8 @@
 					url = '../reportDetail/reportDetail?id=1,other=done'
 				}
 				// 封装跳转并传值事件
-				this.$channel.navigateEmit(url, 'tranferParam', res, 'backData', (res) => {
-					console.log('backData:', res);
+				this.$channel.navigateEmit(url, 'tranferParam', res,'backData',(res)=>{
+					console.log(res);
 				})
 				// console.log(uni);
 				// uni.navigateTo({

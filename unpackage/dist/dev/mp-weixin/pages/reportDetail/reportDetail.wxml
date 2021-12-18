@@ -1,1 +1,1 @@
-<view><view>{{''+commonParam.title+''}}</view></view>
+<view id="reportDetail"><view class="tableAllDiv"><u-skeleton vue-id="de57acc0-1" rows="8" title="{{false}}" loading="{{!tableShow}}" bind:__l="__l" vue-slots="{{['default']}}"><u-transition vue-id="{{('de57acc0-2')+','+('de57acc0-1')}}" show="{{tableShow}}" mode="fade-left" bind:__l="__l" vue-slots="{{['default']}}"><view class="u-content"><u-parse class="tableDiv" vue-id="{{('de57acc0-3')+','+('de57acc0-2')}}" content="{{content}}" bind:__l="__l"></u-parse></view></u-transition></u-skeleton></view></view>
