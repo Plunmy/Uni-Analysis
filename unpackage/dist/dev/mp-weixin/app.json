@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/reportDetail/reportDetail",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/tool/tool",
+    "pages/tool/map"
   ],
   "subPackages": [],
   "window": {
@@ -26,6 +28,12 @@
         "text": "首页"
       },
       {
+        "pagePath": "pages/tool/tool",
+        "iconPath": "static/images/tool.png",
+        "selectedIconPath": "static/images/toolSelect.png",
+        "text": "功能"
+      },
+      {
         "pagePath": "pages/my/my",
         "iconPath": "static/images/me.png",
         "selectedIconPath": "static/images/meSelect.png",
@@ -33,5 +41,11 @@
       }
     ]
   },
-  "usingComponents": {}
+  "permission": {
+    "scope.userLocation": {
+      "desc": "此定位用于展示虚拟数据"
+    }
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

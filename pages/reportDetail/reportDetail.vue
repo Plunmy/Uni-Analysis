@@ -1,6 +1,7 @@
 <template>
 	<view id="reportDetail">
 		<view class="tableAllDiv">
+			<u-alert :title="title" type="primary" :center='true'></u-alert>
 			<u-skeleton rows="8" :title="false" :loading='!tableShow'>
 				<u-transition :show="tableShow" mode='fade-left'>
 					<view class="u-content">
@@ -23,6 +24,7 @@
 				},
 				content: '',
 				tableShow: false,
+				title: '仅测试表格',
 			};
 		},
 		onInit() {},
@@ -139,6 +141,10 @@
 	#reportDetail {
 		.tableAllDiv {
 			margin-top: 5vh;
+
+			/deep/.u-alert {
+				margin-bottom: 5vh;
+			}
 		}
 
 		.tableDiv {

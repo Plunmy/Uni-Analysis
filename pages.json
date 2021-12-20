@@ -24,6 +24,27 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/tool/tool",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+
+		, {
+			"path": "pages/tool/map",
+			"style": {
+				"navigationBarTitleText": "阅卷分析-地图",
+				"enablePullDownRefresh": false
+			}
+			// "permission": {
+			// 	"scope.userLocation": {
+			// 		"desc": "此定位用于展示虚拟数据" // 高速公路行驶持续后台定位
+			// 	}
+			// }
+
 		}
 	],
 	"tabBar": {
@@ -37,6 +58,11 @@
 			"iconPath": "static/images/home.png",
 			"selectedIconPath": "static/images/homeSelect.png",
 			"text": "首页"
+		}, {
+			"pagePath": "pages/tool/tool",
+			"iconPath": "static/images/tool.png",
+			"selectedIconPath": "static/images/toolSelect.png",
+			"text": "功能"
 		}, {
 			"pagePath": "pages/my/my",
 			"iconPath": "static/images/me.png",

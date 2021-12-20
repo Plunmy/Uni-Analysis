@@ -17,7 +17,10 @@
             "delay" : 0
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules" : {
+            "Maps" : {},
+            "Geolocation" : {}
+        },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
@@ -43,7 +46,22 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "maps" : {
+                    "amap" : {
+                        "appkey_ios" : "d9a8ef5779b0769cad5f5df8aa7a21a8",
+                        "appkey_android" : "d9a8ef5779b0769cad5f5df8aa7a21a8"
+                    }
+                },
+                "ad" : {},
+                "geolocation" : {
+                    "amap" : {
+                        "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "d9a8ef5779b0769cad5f5df8aa7a21a8",
+                        "appkey_android" : "d9a8ef5779b0769cad5f5df8aa7a21a8"
+                    }
+                }
+            }
         }
     },
     /* 快应用特有相关 */
@@ -55,7 +73,12 @@
             "urlCheck" : false,
             "es6" : true
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : "此定位用于展示虚拟数据"
+            }
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -69,5 +92,13 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2"
+    "vueVersion" : "2",
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {}
+        },
+        "devServer" : {
+            "https" : false
+        }
+    }
 }

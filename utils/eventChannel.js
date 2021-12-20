@@ -30,7 +30,7 @@ class Channel {
 		eventChannel.emit(emitName, data);
 	}
 	// 跳转页面并传参
-	navigateEmit(url, emitName, data, eventName, callback) {
+	navigateEmit(url, emitName, data, eventName='', callback=()=>{}) {
 		uni.navigateTo({
 			url: url,
 			animationDuration: 400,
