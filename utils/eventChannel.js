@@ -11,6 +11,8 @@ class Channel {
 		const eventChannel = that.getOpenerEventChannel();
 		// #endif
 		let result = null;
+		console.log('that:', that);
+		console.log('eventChannel:', eventChannel);
 		eventChannel.on(emitName, res => {
 			// console.log(res);
 			result = res;
@@ -26,11 +28,11 @@ class Channel {
 		const eventChannel = that.getOpenerEventChannel();
 		// #endif
 		// console.log('emitName:', data);
-		
+
 		eventChannel.emit(emitName, data);
 	}
 	// 跳转页面并传参
-	navigateEmit(url, emitName, data, eventName='', callback=()=>{}) {
+	navigateEmit(url, emitName, data, eventName = '', callback = () => {}) {
 		uni.navigateTo({
 			url: url,
 			animationDuration: 400,

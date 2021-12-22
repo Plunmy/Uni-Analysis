@@ -29,12 +29,20 @@
 		},
 		onInit() {},
 		onLoad(result) {
-			// 取值方法
-			this.$channel.eventOn(this, 'tranferParam', (res) => {
-				uni.setNavigationBarTitle({
-					title: res.title
+			try {
+				console.log(this.$channel);
+				// 取值方法
+				this.$channel.eventOn(this, 'tranferParam', (res) => {
+					uni.setNavigationBarTitle({
+						title: res.title
+					})
 				})
-			})
+			} catch (e) {
+				// 这个会在页面跳转的时候才有这个方法
+				// 如果进来刷新的话 就没有这个方法了 所以要try catch一下
+				console.log(e);
+				//TODO handle the exception
+			}
 			// 及向前页面再次通信的方法
 			// this.$channel.eventEmit(this, 'backData', {
 			// 	name: '1',
