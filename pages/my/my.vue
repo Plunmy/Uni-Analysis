@@ -24,9 +24,12 @@
 		<view class="moreTool">
 			<view class="toolContent">
 				<text>更多应用</text>
-				<view class="tool">
-					sss
-				</view>
+				<!--  	@scrolltolower="lower" @scroll="scroll" @scrolltoupper="upper" -->
+				<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y tool">
+					<view class="toolItem" v-for="(item,i) in 24" :key='i'>
+						xxx{{i}}
+					</view>
+				</scroll-view>
 			</view>
 
 		</view>
@@ -39,6 +42,7 @@
 			return {
 				analasisDay: 0,
 				analasisNum: 0,
+				scrollTop: 0,
 			};
 		}
 	}
@@ -93,7 +97,7 @@
 				width: 70vw;
 				justify-content: flex-start;
 				align-items: center;
-				height: 7vh;
+				height: 8vh;
 				background-color: #eeedf2;
 				border-radius: 12px;
 				font-size: 20px;
@@ -119,7 +123,20 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-				>text{
+
+				.tool {
+					display: flex;
+					flex-wrap: wrap;
+					flex-direction: row;
+					height: 45vh;
+					.toolItem {
+						border: 1px solid white;
+						height: 10vh;
+						width: 10vh;
+					}
+				}
+
+				>text {
 					font-size: 20px;
 					margin: 5px 0;
 				}
