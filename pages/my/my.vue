@@ -25,10 +25,17 @@
 			<view class="toolContent">
 				<text>更多应用</text>
 				<!--  	@scrolltolower="lower" @scroll="scroll" @scrolltoupper="upper" -->
-				<scroll-view :scroll-top="scrollTop" scroll-y="true" class="scroll-Y tool">
-					<view class="toolItem" v-for="(item,i) in 24" :key='i'>
-						xxx{{i}}
+				<scroll-view :scroll-top="scrollTop" :scroll-y="true" :enable-flex='true' class="scroll-Y tool">
+					<!-- 这里是实际排序 -->
+					<view class="toolItem" v-for="(item,i) in scrollList" :key='i'>
+						<text>{{item.text}}</text>
+						<u-icon size="25" :name="item.icon"></u-icon>
 					</view>
+					<!-- 此处进行是否整除判断以及 计算剩余盒子 -->
+					<template v-if="scrollList.length%3">
+						<view class="toolItem" v-for="(item,i) in (3-(scrollList.length%3))" :key='i'>
+						</view>
+					</template>
 				</scroll-view>
 			</view>
 
@@ -43,8 +50,86 @@
 				analasisDay: 0,
 				analasisNum: 0,
 				scrollTop: 0,
+				scrollList: [{
+						text: '删除',
+						icon: 'trash-fill',
+					},
+					{
+						text: '收藏',
+						icon: 'star-fill',
+					},
+					{
+						text: '定位',
+						icon: 'map-fill',
+					},
+					{
+						text: '护眼模式',
+						icon: 'eye-fill',
+					},
+					{
+						text: '物流',
+						icon: 'car-fill',
+					},
+					{
+						text: '警告',
+						icon: 'error-circle-fill',
+					},
+					{
+						text: '礼包',
+						icon: 'coupon-fill',
+					},
+					{
+						text: '置顶',
+						icon: 'pushpin-fill',
+					},
+					{
+						text: '礼品',
+						icon: 'gift-fill',
+					},
+					{
+						text: '安卓',
+						icon: 'android-fill',
+					},
+					{
+						text: '添加',
+						icon: 'plus-square-fill',
+					},
+					{
+						text: '相机',
+						icon: 'camera-fill',
+					},
+					{
+						text: '物流',
+						icon: 'car-fill',
+					},
+					{
+						text: '警告',
+						icon: 'error-circle-fill',
+					},
+					{
+						text: '礼包',
+						icon: 'coupon-fill',
+					},
+					{
+						text: '置顶',
+						icon: 'pushpin-fill',
+					},
+					{
+						text: '礼品',
+						icon: 'gift-fill',
+					},
+					{
+						text: '安卓',
+						icon: 'android-fill',
+					},
+					{
+						text: '添加',
+						icon: 'plus-square-fill',
+					}
+				]
 			};
-		}
+		},
+		onLoad() {}
 	}
 </script>
 
@@ -123,16 +208,26 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				overflow: hidden;
 
 				.tool {
 					display: flex;
 					flex-wrap: wrap;
 					flex-direction: row;
-					height: 45vh;
+					height: 87%;
+					justify-content: space-around;
+
 					.toolItem {
-						border: 1px solid white;
-						height: 10vh;
-						width: 10vh;
+						height: 13vh;
+						width: 12vh;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						text {
+							margin: 5px 0;
+						}
 					}
 				}
 
