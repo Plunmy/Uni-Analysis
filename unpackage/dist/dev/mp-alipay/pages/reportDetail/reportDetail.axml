@@ -1,1 +1,1 @@
-<view></view>
+<view id="reportDetail"><view class="tableAllDiv"><u-alert vue-id="de6bad14-1" title="{{title}}" type="primary" center="{{true}}" onVueInit="__l"></u-alert><u-skeleton vue-id="de6bad14-2" rows="8" title="{{false}}" loading="{{!tableShow}}" onVueInit="__l"><u-transition vue-id="{{('de6bad14-3')+','+('de6bad14-2')}}" show="{{tableShow}}" mode="fade-left" onVueInit="__l"><view class="u-content"><u-parse class="tableDiv" vue-id="{{('de6bad14-4')+','+('de6bad14-3')}}" content="{{content}}" onVueInit="__l"></u-parse></view></u-transition></u-skeleton></view></view>

@@ -32,7 +32,8 @@
 						title: '客服'
 					}, {
 						name: 'camera-fill',
-						title: '相机'
+						title: '图表',
+						router: 'charts'
 					}
 				]
 			};

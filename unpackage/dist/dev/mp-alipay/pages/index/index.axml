@@ -1,1 +1,1 @@
-<view class="content" id="home"><view class="cardDiv"><info-card vue-id="{{'8deb4120-1-'+i}}" cardItem="{{item}}" a:for="{{cardList}}" a:for-item="item" a:for-index="i" a:key="i" onVueInit="__l"></info-card></view></view>
+<view class="content" id="home"><view class="cardDiv"><info-card vue-id="{{'8deb4120-1-'+i}}" cardItem="{{item}}" a:for="{{cardList}}" a:for-item="item" a:for-index="i" a:key="i" onVueInit="__l"></info-card></view><u-toast vue-id="8deb4120-2" ref="__r" data-ref="uToast" onVueInit="__l"></u-toast></view>

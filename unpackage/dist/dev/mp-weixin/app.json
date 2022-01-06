@@ -4,7 +4,8 @@
     "pages/reportDetail/reportDetail",
     "pages/my/my",
     "pages/tool/tool",
-    "pages/tool/map"
+    "pages/tool/map",
+    "pages/tool/charts"
   ],
   "subPackages": [],
   "window": {
@@ -46,6 +47,5 @@
       "desc": "此定位用于展示虚拟数据"
     }
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

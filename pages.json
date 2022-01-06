@@ -31,20 +31,18 @@
 				"enablePullDownRefresh": false
 			}
 
-		}
-
-		, {
+		}, {
 			"path": "pages/tool/map",
 			"style": {
 				"navigationBarTitleText": "阅卷分析-地图",
 				"enablePullDownRefresh": false
 			}
-			// "permission": {
-			// 	"scope.userLocation": {
-			// 		"desc": "此定位用于展示虚拟数据" // 高速公路行驶持续后台定位
-			// 	}
-			// }
-
+		}, {
+			"path": "pages/tool/charts",
+			"style": {
+				"navigationBarTitleText": "图表",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"tabBar": {

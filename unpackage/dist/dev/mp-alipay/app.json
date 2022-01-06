@@ -1,13 +1,41 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/reportDetail/reportDetail"
+    "pages/reportDetail/reportDetail",
+    "pages/my/my",
+    "pages/tool/tool",
+    "pages/tool/map"
   ],
   "subPackages": [],
   "window": {
     "defaultTitle": "阅卷分析",
     "titleBarColor": "#1CBC9C",
     "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "textColor": "#7A7E83",
+    "selectedColor": "#1cbc9c",
+    "backgroundColor": "#ffffff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/images/home.png",
+        "activeIcon": "static/images/homeSelect.png"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "name": "功能",
+        "icon": "static/images/tool.png",
+        "activeIcon": "static/images/toolSelect.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "我的",
+        "icon": "static/images/me.png",
+        "activeIcon": "static/images/meSelect.png"
+      }
+    ]
   },
   "usingComponents": {}
 }
