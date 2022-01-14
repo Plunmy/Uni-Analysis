@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<view class="charts-box">
-			<qiun-data-charts type="line" :opts='options' :loadingType="1" :chartData="chartData" :canvas2d="true"
-				background="#fff" canvasId="tempCharts" />
+			<qiun-data-charts type="line" :opts='options' :chartData="chartData" :canvas2d="true" background="#000"
+				canvasId="tempCharts" />
 		</view>
 	</view>
 </template>
@@ -22,7 +22,7 @@
 						"2021"
 					],
 					"series": [{
-						"name": "分析走势",
+						"name": "成交量C",
 						"data": [
 							100,
 							80,

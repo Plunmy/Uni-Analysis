@@ -47,5 +47,6 @@
       "desc": "此定位用于展示虚拟数据"
     }
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

@@ -215,11 +215,12 @@
 					flex-wrap: wrap;
 					flex-direction: row;
 					height: 87%;
+					width: 70vw;
 					justify-content: space-around;
 
 					.toolItem {
 						height: 13vh;
-						width: 12vh;
+						width: 33%;
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
