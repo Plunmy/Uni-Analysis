@@ -23,7 +23,8 @@
 						router: 'map'
 					}, {
 						name: 'email',
-						title: '邮箱'
+						title: '邮箱',
+						router: 'email'
 					}, {
 						name: 'bell-fill',
 						title: '提醒'
@@ -44,7 +45,7 @@
 				// uni.navigateTo({
 				// 	url: this.gridList[i].router
 				// });
-				this.$channel.navigateEmit(this.gridList[i].router,'transfer',this.gridList[i])
+				this.$channel.navigateEmit(this.gridList[i].router, 'transfer', this.gridList[i])
 			},
 		}
 	}

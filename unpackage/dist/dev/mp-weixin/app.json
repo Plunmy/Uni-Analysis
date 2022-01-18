@@ -5,7 +5,8 @@
     "pages/my/my",
     "pages/tool/tool",
     "pages/tool/map",
-    "pages/tool/charts"
+    "pages/tool/charts",
+    "pages/tool/email"
   ],
   "subPackages": [],
   "window": {

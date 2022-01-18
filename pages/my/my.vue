@@ -218,6 +218,11 @@
 					width: 70vw;
 					justify-content: space-around;
 
+					/deep/.uni-scroll-view-content {
+						display: flex;
+						flex-wrap: wrap;
+					}
+
 					.toolItem {
 						height: 13vh;
 						width: 33%;
