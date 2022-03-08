@@ -2,7 +2,7 @@
 	<view class="previewImage" :style="{ 'background-color': 'rgba(0,0,0,' + opacity + ')' }" v-if="show" @tap="close"
 		@touchmove.stop.prevent>
 		<swiper class="swiper" :current="index" @change="swiperChange" :disable-touch="swiper" :circular="circular">
-			<swiper-item v-for="(img, i) in imgs" :key=`i` :id="'swiper-item-'+i">
+			<swiper-item v-for="(img, i) in imgs" :key="'swiper-item-'+i" :id="'swiper-item-'+i">
 				<movable-area class="marea" scale-area>
 					<movable-view :id="'movable-view-'+i" :key="'movable-view-'+i" class="mview" direction="all"
 						:out-of-bounds="false" :inertia="true" damping="90" friction="2" scale="true" scale-min="1"
@@ -28,7 +28,7 @@
 
 <script>
 	export default {
-		name: 'imgPreview', //插件名称
+		name: 'ksj-previewImage', //插件名称
 		props: {
 			imgs: {
 				//图片列表
@@ -65,14 +65,6 @@
 			circular: {
 				type: Boolean,
 				default: false
-			},
-			isopen: {
-				type: Boolean,
-				default: false
-			},
-			currentImg: {
-				type: String,
-				default: ''
 			}
 		},
 		data() {
@@ -91,6 +83,7 @@
 			onScale(e) {
 
 			},
+
 			//长按事件相关内容---------开始-------------------
 			//接触开始
 			handletouchstart(e) {
@@ -127,6 +120,7 @@
 				this.$emit('longPress', data);
 			},
 			//长按事件相关内容---------结束-------------------
+
 			//图片改变
 			swiperChange(e) {
 				this.index = e.target.current; //更新当前图片index

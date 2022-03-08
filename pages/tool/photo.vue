@@ -23,9 +23,9 @@
 				// 	'../../static/images/imgPre2.jpg',
 				// 	'../../static/images/imgPre3.jpg'
 				// ],
-				imgs: ['https://fuss10.elemecdn.com/9/bb/e27858e973f5d7d3904835f46abbdjpeg.jpeg',
-					'https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg',
-					'https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg'
+				imgs: ['https://img1.baidu.com/it/u=2925040134,2161267160&fm=253&fmt=auto&app=138&f=JPEG',
+					'https://img2.baidu.com/it/u=1900466482,225929612&fm=253&fmt=auto&app=138&f=JPEG',
+					'https://img0.baidu.com/it/u=1935280827,2072276192&fm=253&fmt=auto&app=138&f=JPEG'
 				],
 				descs: ['鹿的图片', '马的图片', '狮子的图片'],
 			}
