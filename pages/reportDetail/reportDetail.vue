@@ -1,5 +1,5 @@
 <template>
-	<view id="reportDetail">
+	<view class="reportDetail">
 		<view class="tableAllDiv">
 			<u-alert :title="title" type="primary" :center='true'></u-alert>
 			<u-skeleton rows="8" :title="false" :loading='!tableShow'>
@@ -146,7 +146,7 @@
 </script>
 
 <style lang="scss">
-	#reportDetail {
+	.reportDetail {
 		.tableAllDiv {
 			margin-top: 5vh;
 

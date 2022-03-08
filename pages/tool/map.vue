@@ -44,18 +44,18 @@
 			};
 		},
 		onLoad() {
-			// this.$channel.eventOn(this, 'transfer', res => {
-			// 	console.log(res);
-			// 	uni.getLocation({
-			// 		type: 'gcj02' || 'wgs84',
-			// 		geocode: true,
-			// 		success: (res) => {
-			// 			console.log('Uni:', res);
-			// 			this.longitude = res.longitude - 0.1;
-			// 			this.latitude = res.latitude - 0.1;
-			// 		}
-			// 	})
-			// })
+			this.$channel.eventOn(this, 'transfer', res => {
+				console.log(res);
+				uni.getLocation({
+					type: 'gcj02' || 'wgs84',
+					geocode: true,
+					success: (res) => {
+						console.log('Uni:', res);
+						this.longitude = res.longitude;
+						this.latitude = res.latitude;
+					}
+				})
+			})
 
 			// var geolocation = new qq.maps.Geolocation();
 			// var options = {

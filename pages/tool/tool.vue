@@ -15,7 +15,8 @@
 			return {
 				gridList: [{
 						name: 'photo',
-						title: '图片'
+						title: '图片',
+						router: 'photo'
 					},
 					{
 						name: 'map-fill',

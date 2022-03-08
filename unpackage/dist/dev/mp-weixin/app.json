@@ -6,7 +6,8 @@
     "pages/tool/tool",
     "pages/tool/map",
     "pages/tool/charts",
-    "pages/tool/email"
+    "pages/tool/email",
+    "pages/tool/photo"
   ],
   "subPackages": [],
   "window": {
@@ -48,6 +49,5 @@
       "desc": "此定位用于展示虚拟数据"
     }
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

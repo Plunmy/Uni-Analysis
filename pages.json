@@ -49,6 +49,12 @@
 				"navigationBarTitleText": "阅卷分析-邮箱",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/tool/photo",
+			"style": {
+				"navigationBarTitleText": "照片",
+				"enablePullDownRefresh": false
+			}
 		}
 	],
 	"tabBar": {

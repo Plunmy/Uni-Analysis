@@ -1,8 +1,12 @@
 <template>
 	<view class="my">
 		<view class="headerInfo">
+			<image src="../../static/images/header.jpg"
+				style="width: 80px!important;height: 80px!important;border-radius: 50%;" shape=" circle"></image>
+			<!-- 			
 			<u--image src="https://cdn.uviewui.com/uview/album/1.jpg" width="80px" height="80px" shape="circle">
 			</u--image>
+			 -->
 			<view class="headerName">
 				<text>邹心安</text>
 				<u-icon size="30" name="edit-pen-fill"></u-icon>
@@ -27,13 +31,13 @@
 				<!--  	@scrolltolower="lower" @scroll="scroll" @scrolltoupper="upper" -->
 				<scroll-view :scroll-top="scrollTop" :scroll-y="true" :enable-flex='true' class="scroll-Y tool">
 					<!-- 这里是实际排序 -->
-					<view class="toolItem" v-for="(item,i) in scrollList" :key='i'>
+					<view class="toolItem" v-for="(item,i) in scrollList" :key='"item"+i'>
 						<text>{{item.text}}</text>
 						<u-icon size="25" :name="item.icon"></u-icon>
 					</view>
 					<!-- 此处进行是否整除判断以及 计算剩余盒子 -->
 					<template v-if="scrollList.length%3">
-						<view class="toolItem" v-for="(item,i) in (3-(scrollList.length%3))" :key='i'>
+						<view class="toolItem" v-for="(item,i) in (3-(scrollList.length%3))" :key='"items"+i'>
 						</view>
 					</template>
 				</scroll-view>
